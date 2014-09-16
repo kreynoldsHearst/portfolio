@@ -1,0 +1,48 @@
+/* line 43, ../compass/sass/style.scss */
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  background: #73bdff url(../images/background.png) no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+/* line 45, ../compass/sass/style.scss */
+body div {
+  position: relative;
+  display: block;
+  z-index: 1;
+}
+/* line 60, ../compass/sass/style.scss */
+body .cloud {
+  position: absolute;
+  width: 20%;
+  height: 0;
+  padding-bottom: 10%;
+  max-width: 234px;
+  background-image: url("../images/cloud.png");
+  background-size: contain;
+  background-position: cover top left;
+  background-repeat: no-repeat;
+}
+/* line 68, ../compass/sass/style.scss */
+body .cloud img {
+  width: 100%;
+  height: 100%;
+}
+/* line 71, ../compass/sass/style.scss */
+body .foreground {
+  position: fixed;
+  bottom: -10px;
+  width: 4500px;
+  z-index: 2;
+}
+/* line 78, ../compass/sass/style.scss */
+body .rearground {
+  position: fixed;
+  bottom: -10px;
+  width: 3000px;
+  z-index: 1;
+}

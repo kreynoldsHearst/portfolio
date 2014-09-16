@@ -1,0 +1,19 @@
+@mixin background($image, $positionY:top, $positionX:left, $size:contain, $repeat:no-repeat)
+{
+	background-image: url($image);
+	background-size: $size;
+	background-position: $positionX $positionY;
+	background-repeat: $repeat;
+}
+
+@mixin fontsize($value)
+{
+	font-size: $value + 0px;
+	@include breakpoint($mobile-landscape) {
+		font-size: $value / 10 + 0vw;
+	}
+					
+	@include breakpoint(980px) {
+		font-size: $value + 0px;
+	}
+}

@@ -1,0 +1,85 @@
+// ----
+// Sass (v3.3.14)
+// Compass (v1.0.0.rc.1)
+// Breakpoint (v2.4.6)
+// Susy (v2.1.3)
+// ----
+
+
+//@import "susy";
+@import "breakpoint";
+@import "compass";
+@import "compass/utilities/general/clearfix";
+//@include border-box-sizing;
+
+// Configuring Susy Defaults
+$susy: (
+  global-box-sizing: border-box,
+  use-custom: (rem: true),
+  columns: 6,
+  column-width: 163px,
+  gutters: 80px/83px,
+  gutter-position: inside,
+  debug: (
+  	image: show  
+  ),
+);
+
+
+
+$blue: 		#3373dd;
+$lightblue:	#73bdff;
+$lightgrey:	#cccccc;
+$darkgrey:	#666666;
+$white:		#ffffff;
+
+$mobile: 			480px;
+$mobile-landscape: 	600px; 
+$tablet-portrait: 	768px;
+$tablet-landscape: 	1024px;
+
+@import 'mixin';
+	
+body {
+
+	div {
+		position: relative;
+		display: block;
+		z-index: 1;
+	}
+	
+	padding: 0px;
+	margin: 0px;
+	height:100%;
+	background: $lightblue url(../images/background.png) no-repeat; 
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+	
+	.cloud {
+		position: absolute;
+		width: 20%;
+		height: 0;
+		padding-bottom: 10%;
+		max-width: 234px;
+		@include background('../images/cloud.png', top left, cover);
+		
+		img { width: 100%; height: 100%; }
+	}
+	
+	.foreground {
+		position: fixed;	// All scrollable elements have to be position:fixed
+		bottom: -10px;			// Make it stick to the bottom (or top)
+		width: 4500px;
+		z-index: 2;
+	}
+	
+	.rearground {
+		position: fixed;	// All scrollable elements have to be position:fixed
+		bottom: -10px;			// Make it stick to the bottom (or top)
+		width: 3000px;
+		z-index: 1;
+	}
+	
+}
